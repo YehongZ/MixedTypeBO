@@ -3,7 +3,7 @@ This is the code for the following paper:
 
 "Bayesian Optimization with Binary Auxiliary Information." Yehong Zhang, Zhongxiang Dai and Bryan Kian Hsiang Low. In Proceedings of the 35th Conference on Uncertainty in Artificial Intelligence (UAI), 2019
 
-## DEPENDENCIES
+## Dependencies
 
 This code depends on the following toolboxes:
 
@@ -14,7 +14,7 @@ This code depends on the following toolboxes:
 * [multigp](https://github.com/SheffieldML/multigp)
 * [netlab](https://github.com/sods/netlab)
 
-## EXAMPLES
+## Examples
 
 ### Mixed-type PES using synthetic functions
 
