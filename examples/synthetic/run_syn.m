@@ -26,7 +26,7 @@ me = [1.2, 1.1, 1.2, 1.2, 0.9, 0.8, 0.6, 1, 0.9, 0.5];
 params = [log(100), log(100), log(1), log(2000), log(100), 1,...
 log(100), log(2000), 1, log(0.01), log(0.001)];
 
-for seq = 1
+for seq = 1:10
        
     task = {@target_synthetic, @auxiliary_synthetic, Name, seq, me(seq)};
     
