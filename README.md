@@ -37,7 +37,7 @@ Download the Bayesian optimal stopping (bos) function "bos_function.py" from [BO
 Prepare the dataset:
 
 ```
->> prepare_cifar10
+>> python prepare_cifar10.py
 ```
 
 Run the CNN example over 5 different initializations:
