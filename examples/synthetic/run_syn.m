@@ -23,7 +23,7 @@ nFeatures = 200;
 me = [1.2, 1.1, 1.2, 1.2, 0.9, 0.8, 0.6, 1, 0.9, 0.5];  
 
 % hypers of the synthetic functions
-params = [log(100), log(100), log(1), log(2000), log(100), 1,...
+syn_params = [log(100), log(100), log(1), log(2000), log(100), 1,...
 log(100), log(2000), 1, log(0.01), log(0.001)];
 
 for seq = 1:10
@@ -34,7 +34,7 @@ for seq = 1:10
     options.oType = {'conti', 'binary'};
     options.M = M;
     options.q = d;
-    options.params = params;
+    options.params = syn_params;
     options.nlf = 1;  % no. of latent function
     options.bias = [0, 0, -me(seq)];
     options.train = 0;
