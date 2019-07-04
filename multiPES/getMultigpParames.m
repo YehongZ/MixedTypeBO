@@ -31,8 +31,8 @@ for i=1:nlf
                 ' .* sensitivity']);
 
     for j=1:M
-        P = 2.*Ptinv(j, :) + Pinv(i, :);
-        kern_norm = sqrt(sqrt(prod(Pinv(i, :))/prod(P)));
+%        P = 2.*Ptinv(j, :) + Pinv(i, :);
+        kern_norm = 1; % sqrt(sqrt(prod(Pinv(i, :))/prod(P)));
         sigma(i, j) = kern_norm.*params(index(j));
         sigma_raw(i, j) = params(index(j));
     end

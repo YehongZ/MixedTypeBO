@@ -48,6 +48,7 @@ options.q = d;
 options.params = params;
 options.nlf = 1;  % no. of latent function
 options.train = 0;
+options.bias = bias;
     
 for loop = 1:T
 
@@ -112,6 +113,7 @@ for loop = 1:T
         
         % umax_f is the simulated function value.
         [result.umax_f(loop, it), result.umax_x(loop, it, :)] = getMaxMean1(model, xmin, xmax, task, t, opts, result.umax_x(loop, it-1, :));
+        
         % The true function value can be achieved via training the CNN model with umax_x as the hyper-parameters
         % Only compute the true_func when it is necessary since it takes long time.
         % result.true_func(loop, it) = getObsValue_cnn_bos(result.umax_x(loop, it, :), 1, fname, gpu);
