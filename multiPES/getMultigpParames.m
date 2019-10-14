@@ -7,7 +7,7 @@ function [Pinv, Ptinv, sigma, sigma2_n, sigma_raw] = getMultigpParames(model)
 M = model.M;
 d = model.q;
 nlf = model.nlf;
-params = model.params;
+params = modelExtractParam(model);
 
 Pinv = zeros(nlf, d);
 for i=1:nlf
