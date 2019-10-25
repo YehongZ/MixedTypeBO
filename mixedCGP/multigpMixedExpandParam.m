@@ -73,6 +73,6 @@ end
 
 for i=1:model.M
     if strcmp(model.oType{i}, 'conti') == 1
-        model.noise{i} = model.kern.comp{2}.comp{i+model.nlf}.variance;
+        model.noise{i} = model.kern.comp{end}.comp{i+model.nlf}.variance;
     end
 end

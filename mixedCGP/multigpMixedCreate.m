@@ -232,9 +232,9 @@ if strcmp(model.kern.type, 'cmpnd') == 1 && length(model.kern.comp) == 2
     for i=1:model.M
         switch model.oType{i}
             case 'conti'
-                model.noise{i} = model.kern.comp{2}.comp{i+model.nlf}.variance;
+                model.noise{i} = model.kern.comp{end}.comp{i+model.nlf}.variance;
             case 'binary'
-                %model.kern.comp{2}.comp{i+model.nlf}.variance = 0;
+                %model.kern.comp{end}.comp{i+model.nlf}.variance = 0;
                 model.noise{i} = exp(-2)*ones(size(model.X{i+model.nlf}, 1), 1);
             otherwise
                 error('Invalid output type!');
