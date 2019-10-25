@@ -9,8 +9,9 @@ function model = multigpMixedUpdateKernels(model)
 switch model.approx
     case 'ftc'
         
-        fK = real(kernCompute(model.kern.comp{1}, model.X));
-        K = fK + real(kernCompute(model.kern.comp{2}, model.X));
+        K = real(kernCompute(model.kern, model.X));
+        fK = K - real(kernCompute(model.kern.comp{end}, model.X));
+
         % This is a hack to allow the inclusion of the latent structure
         % inside the kernel structure
         if sum(cellfun('length',model.X)) == model.N
