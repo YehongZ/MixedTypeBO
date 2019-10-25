@@ -77,6 +77,7 @@ function [model, X, Y] = initializeBO(options, method, task, xmin, xmax, givenX,
         model = multigpMixedCreate(options.q, options.d, Xtrain, ytrain, options);
         params = options.params;
         model = modelExpandParam(model, params);
+        model = multigpMixedEP(model, 20);
         params = modelExtractParam(model);
         model.params = params;
         model.options = options;
